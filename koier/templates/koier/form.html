@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Koierapport</title>
+</head>
+<body>
+    <form action="rapport" method="post">
+        <table>
+            <br>
+            {{form.as_table}}
+        </table>
+    {% csrf_token %}
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
