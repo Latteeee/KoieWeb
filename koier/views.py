@@ -7,8 +7,8 @@ import MySQLdb
 def home(request):
     db = MySQLdb.connect(user='naesheim', db='koier',passwd='1234', host='localhost')
     cursor = db.cursor()
-    cursor.execute('select * from koie')
-    names = [row[0] for row in cursor.fetchall()]
+    cursor.execute('select * from koier_koie')
+    names = [row[1] for row in cursor.fetchall()]
     db.close()
     return render(request, 'koier/base.html',{'names':names})
 
